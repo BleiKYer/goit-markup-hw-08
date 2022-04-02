@@ -1,0 +1,121 @@
+.footer {
+    padding: 60px 0;
+
+    background-color: $hero-footer-bgc;
+
+    &__container {
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__logo {
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+.footer__logo,
+.address__link--direction {
+    color: $primary-white;
+}
+
+.address__item {
+    color: rgba(255, 255, 255, 0.6);
+
+    &:not(:last-child) {
+        margin-bottom: 9px;
+    }
+}
+
+.address {
+    font-style: normal;
+}
+
+.social-nav__title,
+.subscribe-form__title {
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $primary-white;
+}
+
+.social-nav {
+    margin-left: 70px;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+}
+
+.social-nav__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social-nav__link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+
+    fill: $primary-white;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    transition: background-color 250ms $time-function,
+        fill 250ms $time-function;
+
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+    }
+}
+
+.subscribe-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.subscribe-form {
+    padding-top: 12px;
+    margin-left: auto;
+
+    &__input {
+        width: 358px;
+        height: 50px;
+        padding: 15px 16px;
+        margin-right: 12px;
+
+        font-size: 16px;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.6);
+
+        background-color: inherit;
+
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 28px 10px 29px;
+
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.subscribe-form__btn span {
+    margin-right: 10px;
+}

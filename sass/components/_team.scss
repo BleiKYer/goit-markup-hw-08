@@ -1,0 +1,70 @@
+.section-team {
+    background-color: $primary-section-bgc;
+}
+
+.member-list {
+    display: flex;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+}
+
+.member-list__card {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.member-description {
+    background-color: $primary-white;
+    padding: 30px 0;
+
+    &__name {
+        color: $secondary-text-color;
+
+        font-size: 16px;
+        font-weight: 500;
+
+        margin-bottom: 10px;
+    }
+}
+
+.social-links {
+    display: flex;
+    margin-top: 16px;
+    justify-content: center;
+}
+
+.social-links__item {
+    display: flex;
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+    justify-content: center;
+
+    align-items: center;
+    fill: $primary-icon-color;
+
+    transition: background-color 250ms $time-function,
+        fill 250ms $time-function;
+
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: $accent-color;
+
+        fill: $primary-white;
+    }
+}
+
+.social-links__icon {
+    fill: inherit;
+}

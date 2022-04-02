@@ -1,0 +1,33 @@
+.clients-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 170px;
+        height: 92px;
+
+        border: 1px solid $primary-icon-color;
+        border-radius: 4px;
+
+        fill: $primary-icon-color;
+
+        transition: border-color 250ms $time-function,
+            fill 250ms $time-function;
+    }
+
+    &__link:hover,
+    &__link:focus {
+        fill: $accent-color;
+
+        border-color: $accent-color;
+    }
+}
+
+.clients-list__item:not(:last-child) {
+    margin-right: 30px;
+}
