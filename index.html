@@ -26,39 +26,136 @@
         <a class="logo" href="./">
           <span class="logo--accent">Web</span>Studio
         </a>
-        <nav class="nav">
-          <ul class="nav__list list">
-            <li class="nav__item">
-              <a class="nav__link nav__link--current link" href="./index.html"
-                >Студия</a
+        <button
+          type="button"
+          class="menu-button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use class="icon-menu" href="./images/icons.svg#menu"></use>
+            <use class="icon-cross" href="./img/icons.svg#cross"></use>
+          </svg>
+        </button>
+        <div class="mobile-menu" id="mobile-menu" data-menu>
+          <nav class="nav">
+            <ul class="nav__list list">
+              <li class="nav__item">
+                <a class="nav__link nav__link--current link" href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="nav__item">
+                <a class="nav__link link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="contacts-mobile-wrapper">
+            <ul class="contacts-mobile">
+              <li class="contacts-mobile__item">
+                <a
+                  class="contacts-mobile__link-phone link"
+                  href="tel:+380961111111"
+                >
+                  +38 096 111 11 11
+                </a>
+              </li>
+              <li class="contacts-mobile__item">
+                <a
+                  class="contacts-mobile__link-mail link"
+                  href="mailto:info@devstudio.com"
+                >
+                  info@devstudio.com
+                </a>
+              </li>
+            </ul>
+            <ul class="socials-mobile">
+              <li class="socials-mobile__item">
+                <a
+                  class="socials-mobile__link"
+                  href="https://www.instagram.com"
+                  aria-label="Ссылка на Instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Instagram</a
+                >
+              </li>
+              <li class="socials-mobile__item">
+                <a
+                  class="socials-mobile__link"
+                  href="https://www.twitter.com"
+                  aria-label="Ссылка на Twitter"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Twitter</a
+                >
+              </li>
+              <li class="socials-mobile__item">
+                <a
+                  class="socials-mobile__link"
+                  href="https://www.facebook.com"
+                  aria-label="Ссылка на Facebook"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Facebook</a
+                >
+              </li>
+              <li class="socials-mobile__item">
+                <a
+                  class="socials-mobile__link"
+                  href="https://www.linkedin.com"
+                  aria-label="Ссылка на LinkedIn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="nav-contact-wrapper">
+          <nav class="nav">
+            <ul class="nav__list list">
+              <li class="nav__item">
+                <a class="nav__link nav__link--current link" href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="nav__item">
+                <a class="nav__link link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="contacts list">
+            <li class="contacts__item">
+              <a class="contacts__link link" href="mailto:info@devstudio.com">
+                <svg class="contacts__icon" width="16" height="12">
+                  <use href="./images/icons.svg#envelope"></use>
+                </svg>
+                info@devstudio.com</a
               >
             </li>
-            <li class="nav__item">
-              <a class="nav__link link" href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link link" href="">Контакты</a>
+            <li class="contacts__item">
+              <a class="contacts__link link" href="tel:+380961111111">
+                <svg class="contacts__icon" width="10" height="16">
+                  <use href="./images/icons.svg#name"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        <ul class="contacts list">
-          <li class="contacts__item">
-            <a class="contacts__link link" href="mailto:info@devstudio.com">
-              <svg class="contacts__icon" width="16" height="12">
-                <use href="./images/icons.svg#envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts__item">
-            <a class="contacts__link link" href="tel:+380961111111">
-              <svg class="contacts__icon" width="10" height="16">
-                <use href="./images/icons.svg#phone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        </div>
       </div>
     </header>
 
@@ -756,5 +853,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

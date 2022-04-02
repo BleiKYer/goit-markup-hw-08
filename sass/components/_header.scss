@@ -7,8 +7,14 @@
 
     border-bottom: 1px solid #ececec;
 
+    @media (min-width:768px) {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 
     &__container {
+        position: relative;
+
         display: flex;
         align-items: center;
     }
@@ -28,6 +34,14 @@
 
     &--accent {
         color: $accent-color;
+    }
+}
+
+.nav-contact-wrapper {
+    display: none;
+
+    @media (min-width:768px) {
+        display: flex;
     }
 }
 
@@ -98,7 +112,10 @@
 
 .contacts__icon {
     fill: currentColor;
+
     margin-right: 10px;
+
+    transition: color 250ms $time-function;
 }
 
 .header .contacts {
