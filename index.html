@@ -239,7 +239,7 @@
 
       <!-- Секция чем мы занимвемся -->
 
-      <section class="section">
+      <section class="work-section section">
         <div class="container">
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="work-list list">
@@ -278,11 +278,54 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="member-list list">
             <li class="member-list__card">
-              <img
-                src="./images/team1.jpg"
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/team-member1.jpg   1x,
+                    ./images/team/team-member1@2.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/team/team-member1-354.jpg   1x,
+                    ./images/team/team-member1-354@2.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/team/team-member1-450.jpg   1x,
+                    ./images/team/team-member1-450@2.jpg 2x
+                  "
+                  media="(max-width: 767.9px)"
+                  type="image/jpg"
+                />
+
+                <img
+                  src="./images/team/team-member1.jpg"
+                  alt="фото Игорь Демьяненко"
+                  width="270"
+                  loading="lazy"
+                />
+              </picture>
+              <!-- <img
+                srcset="
+                  ./images/team/team-member1-450.jpg   450w,
+                  ./images/team/team-member1-450@2.jpg 900w,
+                  ./images/team/team-member1-354.jpg   354w,
+                  ./images/team/team-member1-354@2.jpg 708w,
+                  ./images/team/team-member1.jpg       270w,
+                  ./images/team/team-member1@2.jpg     540w
+                "
+                src="./images/team/team-member1.jpg"
                 alt="фото Игорь Демьяненко"
                 width="270"
-              />
+                loading="lazy"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+              /> -->
               <div class="member-description">
                 <h3 class="member-description__name">Игорь Демьяненко</h3>
                 <p lang="en" class="member-description__position">
@@ -361,11 +404,39 @@
               </div>
             </li>
             <li class="member-list__card">
-              <img
-                src="./images/team2.jpg"
-                alt="фото Ольга Репина"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/team-member2.jpg   1x,
+                    ./images/team/team-member2@2.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/team/team-member2-354.jpg   1x,
+                    ./images/team/team-member2-354@2.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/team/team-member2-450.jpg   1x,
+                    ./images/team/team-member2-450@2.jpg 2x
+                  "
+                  media="(max-width: 767.9px)"
+                  type="image/jpg"
+                />
+
+                <img
+                  src="./images/team/team-member2.jpg"
+                  alt="фото Ольга Репина"
+                  width="270"
+                  loading="lazy"
+                />
+              </picture>
               <div class="member-description">
                 <h3 class="member-description__name">Ольга Репина</h3>
                 <p lang="en" class="member-description__position">
@@ -444,11 +515,39 @@
               </div>
             </li>
             <li class="member-list__card">
-              <img
-                src="./images/team3.jpg"
-                alt="фото Николай Тарасов"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/team-member3.jpg   1x,
+                    ./images/team/team-member3@2.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/team/team-member3-354.jpg   1x,
+                    ./images/team/team-member3-354@2.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/team/team-member3-450.jpg   1x,
+                    ./images/team/team-member3-450@2.jpg 2x
+                  "
+                  media="(max-width: 767.9px)"
+                  type="image/jpg"
+                />
+
+                <img
+                  src="./images/team/team-member3.jpg"
+                  alt="фото Николай Тарасов"
+                  width="270"
+                  loading="lazy"
+                />
+              </picture>
               <div class="member-description">
                 <h3 class="member-description__name">Николай Тарасов</h3>
                 <p lang="en" class="member-description__position">Marketing</p>
@@ -525,11 +624,38 @@
               </div>
             </li>
             <li class="member-list__card">
-              <img
-                src="./images/team4.jpg"
-                alt="фото Михаил Ермаков"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/team-member4.jpg   1x,
+                    ./images/team/team-member4@2.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/team/team-member4-354.jpg   1x,
+                    ./images/team/team-member4-354@2.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/team/team-member4-450.jpg   1x,
+                    ./images/team/team-member4-450@2.jpg 2x
+                  "
+                  media="(max-width: 767.9px)"
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/team/team-member4.jpg"
+                  alt="фото Михаил Ермаков"
+                  width="270"
+                  loading="lazy"
+                />
+              </picture>
               <div class="member-description">
                 <h3 class="member-description__name">Михаил Ермаков</h3>
                 <p lang="en" class="member-description__position">
