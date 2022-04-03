@@ -17,30 +17,30 @@
     margin-left: auto;
     margin-right: auto;
 
-    @media (min-width: 480px) {
+    @include mq(mobile) {
         width: 480px;
     }
 
-    @media (min-width: 768px) {
+    @include mq(tablet) {
         width: 768px;
     }
 
-    @media (min-width: 1200px) {
+    @include mq(desktop) {
         width: 1200px;
     }
 }
 
+
 .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
 
-    // padding-top: 94px;
-    // padding-bottom: 94px;
-    @media (max-width: 1199px) {
-        padding: 60px 0;
-    }
+    margin-left: auto;
+    margin-right: auto;
 
-    @media (min-width: 1200px) {
-        padding: 94px 0;
-
+    @include mq(notDesktop) {
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 
 
@@ -51,6 +51,26 @@
         line-height: 1.17;
         text-align: center;
         margin-bottom: 50px;
+    }
+}
+
+.logo {
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.48;
+
+    color: $secondary-text-color;
+    text-decoration: none;
+
+    margin-right: 93px;
+
+    @include mq(tablet-only) {
+        margin-right: auto;
+    }
+
+    &--accent {
+        color: $accent-color;
     }
 }
 
