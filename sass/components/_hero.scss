@@ -1,6 +1,11 @@
 .hero {
     padding: 200px 0px;
 
+    @include mq(notDesktop) {
+        padding-top: 118px;
+        padding-bottom: 118px;
+    }
+
     margin-left: auto;
     margin-right: auto;
 
@@ -11,12 +16,51 @@
 
     max-width: 1600px;
     background-image: linear-gradient(to right,
-            rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)),
-        url("../images/hero-bg.jpg");
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+    url(../images/hero/hero-bg.jpg);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
+
+    @include mq(retina) {
+        background-image: linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+            url(../images/hero/hero-bg@2.jpg);
+    }
+
+    @include mq(mobile-only) {
+        max-width: 767.9px;
+        min-height: 400px;
+        background-image: linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+            url(../images/hero/hero-bg480.jpg);
+
+        @include mq(retina) {
+            background-image: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url(../images/hero/hero-bg480@2x.jpg);
+        }
+    }
+
+    @include mq(tablet-only) {
+        max-width: 1599.9px;
+        min-height: 400px;
+        background-image: linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+            url(../images/hero/hero-bg768.jpg);
+
+        @include mq(retina) {
+            background-image: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url(../images/hero/hero-bg768@2x.jpg);
+        }
+    }
 
     &__title {
         max-width: 696px;
@@ -31,5 +75,10 @@
         line-height: 1.36;
         text-transform: uppercase;
         letter-spacing: 00.06em;
+
+        @include mq(notDesktop) {
+            font-size: 26px;
+            max-width: 360px;
+        }
     }
 }
