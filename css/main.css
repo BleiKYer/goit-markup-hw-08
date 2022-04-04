@@ -1430,7 +1430,7 @@ img {
 
 @media screen and (max-width: 767.9px) {
   .order-form__message {
-    max-height: 120px;
+    max-height: 90px;
   }
 }
 
