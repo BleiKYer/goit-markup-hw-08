@@ -147,6 +147,12 @@
     }
 }
 
+.contacts-mobile {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
 .contacts {
     margin-left: auto;
 

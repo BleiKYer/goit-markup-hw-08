@@ -244,27 +244,52 @@
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="work-list list">
             <li class="work-list__item">
-              <img
-                src="./images/job1.jpg"
-                alt="Десктопные приложения"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="./images/job1.jpg 1x, ./images/job1@2.jpg 2x"
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/job1.jpg"
+                  alt="Десктопные приложения"
+                  width="370"
+                />
+                <source />
+              </picture>
+
               <h3 class="work-list__description">Десктопные приложения"</h3>
             </li>
             <li class="work-list__item">
-              <img
-                src="./images/job2.jpg"
-                alt="Мобильные приложения"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="./images/job2.jpg 1x, ./images/job2@2.jpg 2x"
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/job2.jpg"
+                  alt="Мобильные приложения"
+                  width="370"
+                />
+              </picture>
+
               <h3 class="work-list__description">Мобильные приложения</h3>
             </li>
             <li class="work-list__item">
-              <img
-                src="./images/job3.jpg"
-                alt="Дизайнерские решения"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="./images/job3.jpg 1x, ./images/job3@2.jpg 2x"
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/job3.jpg"
+                  alt="Дизайнерские решения"
+                  width="370"
+                />
+              </picture>
+
               <h3 class="work-list__description">Дизайнерские решения</h3>
             </li>
           </ul>
