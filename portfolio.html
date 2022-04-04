@@ -26,41 +26,143 @@
         <a class="logo" href="./">
           <span class="logo--accent">Web</span>Studio
         </a>
-        <nav class="nav">
-          <ul class="nav__list list">
-            <li class="nav__item">
-              <a class="nav__link link" href="./index.html">Студия</a>
-            </li>
-            <li class="nav__item">
-              <a
-                class="nav__link nav__link--current link"
-                href="./portfolio.html"
-                >Портфолио</a
+        <div class="nav-contact-wrapper">
+          <nav class="nav">
+            <ul class="nav__list list">
+              <li class="nav__item">
+                <a class="nav__link link" href="./index.html">Студия</a>
+              </li>
+              <li class="nav__item">
+                <a
+                  class="nav__link link nav__link--current link"
+                  href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="nav__item">
+                <a class="nav__link link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="contacts list">
+            <li class="contacts__item">
+              <a class="contacts__link link" href="mailto:info@devstudio.com">
+                <svg class="contacts__icon" width="16" height="12">
+                  <use href="./images/icons.svg#envelope"></use>
+                </svg>
+                info@devstudio.com</a
               >
             </li>
-            <li class="nav__item">
-              <a class="nav__link link" href="">Контакты</a>
+            <li class="contacts__item">
+              <a class="contacts__link link" href="tel:+380961111111">
+                <svg class="contacts__icon" width="10" height="16">
+                  <use href="./images/icons.svg#phone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        <ul class="contacts list">
-          <li class="contacts__item">
-            <a class="contacts__link link" href="mailto:info@devstudio.com">
-              <svg class="contacts__icon" width="16" height="12">
-                <use href="./images/icons.svg#envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts__item">
-            <a class="contacts__link link" href="tel:+380961111111">
-              <svg class="contacts__icon" width="10" height="16">
-                <use href="./images/icons.svg#phone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        </div>
+        <button
+          type="button"
+          class="menu-button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg
+            class="menu-button__svg"
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use class="icon-menu" href="./images/icons.svg#menu"></use>
+            <use class="icon-cross" href="./images/icons.svg#cross"></use>
+          </svg>
+        </button>
+        <div class="mobile-menu" id="mobile-menu" data-menu>
+          <nav class="mobile-nav">
+            <ul class="mobile-nav__list list">
+              <li class="mobile-nav__item">
+                <a
+                  class="mobile-nav__link mobile-nav__link--current link"
+                  href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link link" href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="mobile-nav__item">
+                <a class="mobile-nav__link link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="contacts-mobile-wrapper">
+            <ul class="contacts-mobile list">
+              <li class="contacts-mobile__item">
+                <a
+                  class="contacts-mobile__link-phone link"
+                  href="tel:+380961111111"
+                >
+                  +38 096 111 11 11
+                </a>
+              </li>
+              <li class="contacts-mobile__item">
+                <a
+                  class="contacts-mobile__link-mail link"
+                  href="mailto:info@devstudio.com"
+                >
+                  info@devstudio.com
+                </a>
+              </li>
+            </ul>
+            <ul class="socials-mobile list">
+              <li class="socials-mobile__item">
+                <a
+                  class="socials-mobile__link"
+                  href="https://www.instagram.com"
+                  aria-label="Ссылка на Instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Instagram</a
+                >
+              </li>
+              <li class="socials-mobile__item">
+                <a
+                  class="socials-mobile__link"
+                  href="https://www.twitter.com"
+                  aria-label="Ссылка на Twitter"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Twitter</a
+                >
+              </li>
+              <li class="socials-mobile__item">
+                <a
+                  class="socials-mobile__link"
+                  href="https://www.facebook.com"
+                  aria-label="Ссылка на Facebook"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Facebook</a
+                >
+              </li>
+              <li class="socials-mobile__item">
+                <a
+                  class="socials-mobile__link"
+                  href="https://www.linkedin.com"
+                  aria-label="Ссылка на LinkedIn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -95,11 +197,38 @@
             <li class="project-card">
               <a class="project-card__link link" href="">
                 <div class="project-card__image">
-                  <img
-                    src="./images/project1.jpg"
-                    alt="Технокряк"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/projects/project1.jpg   1x,
+                        ./images/projects/project1@2.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/project1-354.jpg   1x,
+                        ./images/projects/project1-354@2.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/project1-450.jpg   1x,
+                        ./images/projects/project1-450@2.jpg 2x
+                      "
+                      media="(max-width: 767.9px)"
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/projects/project1.jpg"
+                      alt="Технокряк"
+                      width="370"
+                    />
+                  </picture>
+
                   <p class="project-card__notice">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -115,11 +244,38 @@
             <li class="project-card">
               <a class="project-card__link link" href="">
                 <div class="project-card__image">
-                  <img
-                    src="./images/project2.jpg"
-                    alt="Постер New Orlean vs Golden Star"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/projects/project2.jpg   1x,
+                        ./images/projects/project2@2.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/project2-354.jpg   1x,
+                        ./images/projects/project2-354@2.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/project2-450.jpg   1x,
+                        ./images/projects/project2-450@2.jpg 2x
+                      "
+                      media="(max-width: 767.9px)"
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/projects/project2.jpg"
+                      alt="Постер New Orlean vs Golden Star"
+                      width="370"
+                    />
+                  </picture>
+
                   <p class="project-card__notice">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -138,11 +294,39 @@
             <li class="project-card">
               <a class="project-card__link link" href="">
                 <div class="project-card__image">
-                  <img
-                    src="./images/project3.jpg"
-                    alt="Ресторан Seafood"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/projects/project3.jpg   1x,
+                        ./images/projects/project3@2.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/project3-354.jpg   1x,
+                        ./images/projects/project3-354@2.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/project3-450.jpg   1x,
+                        ./images/projects/project3-450@2.jpg 2x
+                      "
+                      media="(max-width: 767.9px)"
+                      type="image/jpg"
+                    />
+
+                    <img
+                      src="./images/projects/project3.jpg"
+                      alt="Ресторан Seafood"
+                      width="370"
+                    />
+                  </picture>
+
                   <p class="project-card__notice">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -160,11 +344,39 @@
             <li class="project-card">
               <a class="project-card__link link" href="">
                 <div class="project-card__image">
-                  <img
-                    src="./images/project4.jpg"
-                    alt="Проект Prime"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/projects/project4.jpg   1x,
+                        ./images/projects/project4@2.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/project4-354.jpg   1x,
+                        ./images/projects/project4-354@2.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/project4-450.jpg   1x,
+                        ./images/projects/project4-450@2.jpg 2x
+                      "
+                      media="(max-width: 767.9px)"
+                      type="image/jpg"
+                    />
+
+                    <img
+                      src="./images/projects/project4.jpg"
+                      alt="Проект Prime"
+                      width="370"
+                    />
+                  </picture>
+
                   <p class="project-card__notice">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -182,11 +394,38 @@
             <li class="project-card">
               <a class="project-card__link link" href="">
                 <div class="project-card__image">
-                  <img
-                    src="./images/project5.jpg"
-                    alt="Проект Boxes"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/projects/project5.jpg   1x,
+                        ./images/projects/project5@2.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/project5-354.jpg   1x,
+                        ./images/projects/project5-354@2.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/project5-450.jpg   1x,
+                        ./images/projects/project5-450@2.jpg 2x
+                      "
+                      media="(max-width: 767.9px)"
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/projects/project5.jpg"
+                      alt="Проект Boxes"
+                      width="370"
+                    />
+                  </picture>
+
                   <p class="project-card__notice">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -204,11 +443,38 @@
             <li class="project-card">
               <a class="project-card__link link" href="">
                 <div class="project-card__image">
-                  <img
-                    src="./images/project6.jpg"
-                    alt="Inspiration has no Borders"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/projects/project6.jpg   1x,
+                        ./images/projects/project6@2.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/project6-354.jpg   1x,
+                        ./images/projects/project6-354@2.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/project6-450.jpg   1x,
+                        ./images/projects/project6-450@2.jpg 2x
+                      "
+                      media="(max-width: 767.9px)"
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/projects/project6.jpg"
+                      alt="Inspiration has no Borders"
+                      width="370"
+                    />
+                  </picture>
+
                   <p class="project-card__notice">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -226,11 +492,38 @@
             <li class="project-card">
               <a class="project-card__link link" href="">
                 <div class="project-card__image">
-                  <img
-                    src="./images/project7.jpg"
-                    alt="Издание Limited Edition"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/projects/project7.jpg   1x,
+                        ./images/projects/project7@2.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/project7-354.jpg   1x,
+                        ./images/projects/project7-354@2.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/project7-450.jpg   1x,
+                        ./images/projects/project7-450@2.jpg 2x
+                      "
+                      media="(max-width: 767.9px)"
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/projects/project7.jpg"
+                      alt="Издание Limited Edition"
+                      width="370"
+                    />
+                  </picture>
+
                   <p class="project-card__notice">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -249,11 +542,38 @@
             <li class="project-card">
               <a class="project-card__link link" href="">
                 <div class="project-card__image">
-                  <img
-                    src="./images/project8.jpg"
-                    alt="Проект LAB"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/projects/project8.jpg   1x,
+                        ./images/projects/project8@2.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/project8-354.jpg   1x,
+                        ./images/projects/project8-354@2.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/project8-450.jpg   1x,
+                        ./images/projects/project8-450@2.jpg 2x
+                      "
+                      media="(max-width: 767.9px)"
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/projects/project8.jpg"
+                      alt="Проект LAB"
+                      width="370"
+                    />
+                  </picture>
+
                   <p class="project-card__notice">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -272,11 +592,38 @@
             <li class="project-card">
               <a class="project-card__link link" href="">
                 <div class="project-card__image">
-                  <img
-                    src="./images/project9.jpg"
-                    alt="Growing Business"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/projects/project9.jpg   1x,
+                        ./images/projects/project9@2.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/project9-354.jpg   1x,
+                        ./images/projects/project9-354@2.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/project9-450.jpg   1x,
+                        ./images/projects/project9-450@2.jpg 2x
+                      "
+                      media="(max-width: 767.9px)"
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/projects/project9.jpg"
+                      alt="Growing Business"
+                      width="370"
+                    />
+                  </picture>
+
                   <p class="project-card__notice">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -298,93 +645,98 @@
 
     <footer class="footer">
       <div class="container footer__container">
-        <div class="address-wrapper">
-          <a class="footer__logo logo" href="./">
-            <span class="logo--accent">Web</span>Studio
-          </a>
-          <address class="address">
-            <ul class="address__list list">
-              <li class="address__item">
+        <div class="footer__thumb">
+          <div class="address-wrapper">
+            <a class="footer__logo logo" href="./">
+              <span class="logo--accent">Web</span>Studio
+            </a>
+            <address class="address">
+              <ul class="address__list list">
+                <li class="address__item">
+                  <a
+                    class="address__link link address__link--direction"
+                    href="https://goo.gl/maps/nArQLsKEkhJ67aAS9"
+                    aria-label="Ссылка Google Maps"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >г. Киев, пр-т Леси Украинки, 26
+                  </a>
+                </li>
+                <li class="address__item">
+                  <a class="address__link link" href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="address__item">
+                  <a class="address__link link" href="tel:+380961111111"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="social-nav">
+            <h2 class="social-nav__title">присоединяйтесь</h2>
+            <ul class="social-nav__list list">
+              <li class="social-nav__item">
                 <a
-                  class="address__link link address__link--direction"
-                  href="https://goo.gl/maps/nArQLsKEkhJ67aAS9"
-                  aria-label="Ссылка Google Maps"
+                  href="https://www.instagram.com"
+                  class="social-nav__link link"
+                  aria-label="Ссылка на Instagram"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >г. Киев, пр-т Леси Украинки, 26
+                >
+                  <svg
+                    class="social-nav__icon instagram"
+                    width="20"
+                    height="20"
+                  >
+                    <use href="./images/icons.svg#instagram"></use>
+                  </svg>
                 </a>
               </li>
-              <li class="address__item">
-                <a class="address__link link" href="mailto:info@devstudio.com"
-                  >info@devstudio.com</a
+              <li class="social-nav__item">
+                <a
+                  href="https://www.twitter.com"
+                  class="social-nav__link link"
+                  aria-label="Ссылка на Twitter"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
+                  <svg class="social-nav__icon twitter" width="20" height="20">
+                    <use href="./images/icons.svg#twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="address__item">
-                <a class="address__link link" href="tel:+380961111111"
-                  >+38 096 111 11 11</a
+              <li class="social-nav__item">
+                <a
+                  href="https://www.facebook.com"
+                  class="social-nav__link link"
+                  aria-label="Ссылка на Facebook"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
+                  <svg class="social-nav__icon facebook" width="20" height="20">
+                    <use href="./images/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-nav__item">
+                <a
+                  href="https://www.linkedin.com"
+                  class="social-nav__link link"
+                  aria-label="Ссылка на LinkedIn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg class="social-nav__icon linkedin" width="20" height="20">
+                    <use href="./images/icons.svg#linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
+          </div>
         </div>
-        <div class="social-nav">
-          <h2 class="social-nav__title">присоединяйтесь</h2>
-          <ul class="social-nav__list list">
-            <li class="social-nav__item">
-              <a
-                href="https://www.instagram.com"
-                class="social-nav__link link"
-                aria-label="Ссылка на Instagram"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <svg class="social-nav__icon instagram" width="20" height="20">
-                  <use href="./images/icons.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-nav__item">
-              <a
-                href="https://www.twitter.com"
-                class="social-nav__link link"
-                aria-label="Ссылка на Twitter"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <svg class="social-nav__icon twitter" width="20" height="20">
-                  <use href="./images/icons.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-nav__item">
-              <a
-                href="https://www.facebook.com"
-                class="social-nav__link link"
-                aria-label="Ссылка на Facebook"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <svg class="social-nav__icon facebook" width="20" height="20">
-                  <use href="./images/icons.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-nav__item">
-              <a
-                href="https://www.linkedin.com"
-                class="social-nav__link link"
-                aria-label="Ссылка на LinkedIn"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <svg class="social-nav__icon linkedin" width="20" height="20">
-                  <use href="./images/icons.svg#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-
         <form class="subscribe-form" name="subscribe-form" autocomplete="off">
           <h2 class="subscribe-form__title">Подпишитесь на рассылку</h2>
           <div class="subscribe-wrapper">
@@ -404,5 +756,7 @@
         </form>
       </div>
     </footer>
+
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
