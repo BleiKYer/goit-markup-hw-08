@@ -1422,6 +1422,12 @@ img {
   transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (max-width: 767.9px) {
+  .order-form__message {
+    max-height: 120px;
+  }
+}
+
 .policy-text {
   line-height: 1.72;
   letter-spacing: 0.03em;
@@ -1430,7 +1436,7 @@ img {
 
 @media screen and (max-width: 1199.9px) {
   .policy-text {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 
