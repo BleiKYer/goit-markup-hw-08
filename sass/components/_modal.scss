@@ -31,15 +31,19 @@
     &__form {
         position: relative;
 
-        width: 450px;
+
         padding: 35px;
 
         @include mq (desktop) {
             width: 528px;
-
         }
 
-        @include mq (mobile) {
+        @include mq (tablet-only) {
+            width: 450px;
+        }
+
+        @include mq (mobile-only) {
+            width: 100vw;
             padding: 40px;
         }
 
