@@ -143,7 +143,19 @@
     margin-left: auto;
 
     &__input {
-        width: 358px;
+        width: 100%;
+
+        @include mq (tablet-only) {
+            width: 450px;
+        }
+
+        @include mq (desktop) {
+            width: 358px;
+            margin-right: 12px;
+            margin-bottom: 0;
+        }
+
+
         height: 50px;
         padding: 15px 16px;
         margin-right: 12px;
