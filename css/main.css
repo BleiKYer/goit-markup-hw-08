@@ -1272,7 +1272,8 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 15px;
+  padding: 0;
+  z-index: 111;
   overflow-y: scroll;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
@@ -1289,6 +1290,7 @@ img {
 
 .backdrop__form {
   position: relative;
+  width: 450px;
   padding: 35px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1299,18 +1301,6 @@ img {
 @media screen and (min-width: 1200px) {
   .backdrop__form {
     width: 528px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
-  .backdrop__form {
-    width: 450px;
-  }
-}
-
-@media screen and (max-width: 767.9px) {
-  .backdrop__form {
-    width: 100vw;
     padding: 40px;
   }
 }
@@ -1322,8 +1312,9 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
   top: 8px;
   right: 8px;
@@ -1473,6 +1464,8 @@ img {
   width: 16px;
   height: 15px;
   margin-right: 7px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   vertical-align: middle;
   border: 1px solid #212121;
   border-radius: 2px;

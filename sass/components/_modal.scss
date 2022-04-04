@@ -14,7 +14,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 15px;
+    padding: 0;
+    z-index: 111;
 
     @include mq (tablet) {
         padding: 0;
@@ -31,21 +32,22 @@
     &__form {
         position: relative;
 
-
+        width: 450px;
         padding: 35px;
 
         @include mq (desktop) {
             width: 528px;
-        }
-
-        @include mq (tablet-only) {
-            width: 450px;
-        }
-
-        @include mq (mobile-only) {
-            width: 100vw;
             padding: 40px;
         }
+
+        // @include mq (tablet-only) {
+        //     width: 450px;
+        // }
+
+        // @include mq (mobile-only) {
+        //     width: 450px;
+
+        // }
 
         background-color: $primary-white;
 
@@ -58,7 +60,7 @@
     &__close-btn {
         display: flex;
         align-items: center;
-        align-content: center;
+        justify-content: center;
 
         position: absolute;
         top: 8px;
@@ -201,7 +203,6 @@
     justify-content: center;
     margin-bottom: 30px;
 
-
     &__order {
         position: absolute;
         width: 1px;
@@ -218,7 +219,7 @@
         width: 16px;
         height: 15px;
         margin-right: 7px;
-
+        flex-shrink: 0;
 
         vertical-align: middle;
 
